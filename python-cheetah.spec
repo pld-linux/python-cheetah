@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
