@@ -3,7 +3,7 @@ Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
 Version:	0.9.14
-Release:	2
+Release:	3
 License:	Python
 Group:		Libraries/Python
 Source0:	http://www.cheetahtemplate.org/Downloads/Cheetah-%{version}.tar.gz
@@ -49,3 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/Webware/Cheetah/Utils/*.py[oc]
 
 %{py_sitedir}/Webware.pth
+
+%attr(755,root,root) %{_bindir}/cheetah
+%attr(755,root,root) %{_bindir}/cheetah-compile
