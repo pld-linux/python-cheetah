@@ -7,6 +7,7 @@ Release:	3
 License:	Python
 Group:		Libraries/Python
 Source0:	http://www.cheetahtemplate.org/Downloads/Cheetah-%{version}.tar.gz
+# Source0-md5:	500a4fa02250836cb65b87e029512cf0
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
