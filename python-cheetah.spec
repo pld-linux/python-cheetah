@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
 Summary:	Python-powered template engine and code-generator
-Summary(pl):	System szblonów dla jêzyka Python
+Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
 Version:	0.9.14
 Release:	1
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Python-powered template engine and code-generator.
 
 %description -l pl
-System szblonów dla jêzyka Python.
+System szablonów dla jêzyka Python.
 
 %prep
 %setup -q -n Cheetah-%{version}
@@ -33,14 +33,12 @@ export PYTHONPATH
 
 python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 
-gzip -9fn README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 
 %dir %{py_sitedir}/Webware
 %dir %{py_sitedir}/Webware/Cheetah
