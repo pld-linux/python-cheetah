@@ -2,12 +2,13 @@ Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
 Version:	0.9.15
-Release:	5
+Release:	6
 License:	Python
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}.tar.gz
 # Source0-md5:	319ec904e002da97061d58eadd72fa5c
 URL:		http://www.cheetahtemplate.org/
+BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
