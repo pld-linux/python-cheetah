@@ -2,11 +2,12 @@
 Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
-Version:	0.9.14
-Release:	2
+Version:	0.9.15
+Release:	1
 License:	Python
 Group:		Libraries/Python
-Source0:	http://www.cheetahtemplate.org/Downloads/Cheetah-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}.tar.gz
+# Source0-md5:	319ec904e002da97061d58eadd72fa5c
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
@@ -40,12 +41,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 
-%dir %{py_sitedir}/Webware
-%dir %{py_sitedir}/Webware/Cheetah
-%{py_sitedir}/Webware/Cheetah/*.py[oc]
-%{py_sitedir}/Webware/Cheetah/Templates/*.py[oc]
-%{py_sitedir}/Webware/Cheetah/Tests/*.py[oc]
-%{py_sitedir}/Webware/Cheetah/Tools/*.py[oc]
-%{py_sitedir}/Webware/Cheetah/Utils/*.py[oc]
-
-%{py_sitedir}/Webware.pth
+%attr(755,root,root) %{_bindir}/cheetah*
+%dir %{py_sitedir}/Cheetah
+%{py_sitedir}/Cheetah/*.py[oc]
+%{py_sitedir}/Cheetah/*.so
+%{py_sitedir}/Cheetah/Templates/*.py[oc]
+%{py_sitedir}/Cheetah/Tests/*.py[oc]
+%{py_sitedir}/Cheetah/Tools/*.py[oc]
+%{py_sitedir}/Cheetah/Utils/*.py[oc]
+%{py_sitedir}/Cheetah/Utils/optik/*.py[oc]
