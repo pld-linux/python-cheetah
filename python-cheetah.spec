@@ -43,6 +43,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/cheetah*
 %dir %{py_sitedir}/Cheetah
+%dir %{py_sitedir}/Cheetah/Templates
+%dir %{py_sitedir}/Cheetah/Tests
+%dir %{py_sitedir}/Cheetah/Tools
+%dir %{py_sitedir}/Cheetah/Utils
+%dir %{py_sitedir}/Cheetah/Utils/optik
 %{py_sitedir}/Cheetah/*.py[oc]
 %{py_sitedir}/Cheetah/*.so
 %{py_sitedir}/Cheetah/Templates/*.py[oc]
