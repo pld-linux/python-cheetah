@@ -4,7 +4,7 @@ Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
 Version:	0.9.14
 Release:	1
-License:	Python license
+License:	Python
 Group:		Libraries/Python
 Source0:	http://www.cheetahtemplate.org/Downloads/Cheetah-%{version}.tar.gz
 URL:		http://www.cheetahtemplate.org/
