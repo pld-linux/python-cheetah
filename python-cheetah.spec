@@ -12,7 +12,6 @@ Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
