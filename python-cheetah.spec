@@ -1,12 +1,13 @@
+%define		snap 20040926
 Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
-Version:	0.9.15
-Release:	5
+Version:	0.9.16
+Release:	0.%{snap}.1
 License:	Python
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}.tar.gz
-# Source0-md5:	319ec904e002da97061d58eadd72fa5c
+Source0:	Cheetah-snap-%{snap}.tar.bz2
+# Source0-md5:	adfde8417e9502758922284a873eed64
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
@@ -20,7 +21,7 @@ Python-powered template engine and code-generator.
 System szablonów dla jêzyka Python.
 
 %prep
-%setup -q -n Cheetah-%{version}
+%setup -q -n Cheetah
 
 %build
 python setup.py build
