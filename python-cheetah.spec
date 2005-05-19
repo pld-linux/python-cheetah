@@ -1,3 +1,5 @@
+# TODO
+# - SECURITY http://www.gentoo.org/security/en/glsa/glsa-200505-14.xml
 %define		_rc	a2
 #
 Summary:	Python-powered template engine and code-generator
