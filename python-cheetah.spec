@@ -1,16 +1,14 @@
 # TODO
 # - SECURITY http://www.gentoo.org/security/en/glsa/glsa-200505-14.xml
-%define		_rc	a2
-#
 Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
-Version:	0.9.16
-Release:	1.%{_rc}.1
+Version:	0.9.17
+Release:	1
 License:	Python
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}%{_rc}.tar.gz
-# Source0-md5:	e744fe28971a847f2ea56525e65e4896
+Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}.tar.gz
+# Source0-md5:	710f1d93ee841bd4d30fcb053cd1b2de
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
@@ -24,7 +22,7 @@ Python-powered template engine and code-generator.
 System szablonów dla jêzyka Python.
 
 %prep
-%setup -q -n Cheetah-%{version}%{_rc}
+%setup -q -n Cheetah-%{version}
 
 %build
 python setup.py build
