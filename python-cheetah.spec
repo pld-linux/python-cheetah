@@ -51,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/Cheetah/*.py[oc]
 %{py_sitedir}/Cheetah/*.so
 %{py_sitedir}/Cheetah/Templates/*.py[oc]
-{py_sitedir}/Cheetah/Templates/*.tmpl
+%{py_sitedir}/Cheetah/Templates/*.tmpl
 %{py_sitedir}/Cheetah/Tests/*.py[oc]
 %{py_sitedir}/Cheetah/Tools/*.py[oc]
 %{py_sitedir}/Cheetah/Utils/*.py[oc]
