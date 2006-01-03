@@ -5,7 +5,7 @@ Version:	1.0
 Release:	2
 License:	Python
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/sourceforge/cheetahtemplate/Cheetah-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/cheetahtemplate/Cheetah-%{version}.tar.gz
 # Source0-md5:	aaa4907b8877093b9bb11e6cea6b029b
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
