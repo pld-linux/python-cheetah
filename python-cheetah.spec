@@ -11,6 +11,7 @@ Patch0:		%{name}-setuptools.patch
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
+BuildRequires:  python-setuptools >= 0.6-0.a9.1
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
