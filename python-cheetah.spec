@@ -2,11 +2,12 @@ Summary:	Python-powered template engine and code-generator
 Summary(pl):	System szablonów dla jêzyka Python
 Name:		python-cheetah
 Version:	1.0
-Release:	2
+Release:	3
 License:	Python
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/cheetahtemplate/Cheetah-%{version}.tar.gz
 # Source0-md5:	aaa4907b8877093b9bb11e6cea6b029b
+Patch0:		%{name}-setuptools.patch
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
@@ -21,6 +22,7 @@ System szablonów dla jêzyka Python.
 
 %prep
 %setup -q -n Cheetah-%{version}
+%patch -p1
 
 %build
 python setup.py build
@@ -30,6 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 PYTHONPATH=$RPM_BUILD_ROOT%{py_sitedir}; export PYTHONPATH
 
 python setup.py install \
+	--single-version-externally-managed \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -56,6 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/Cheetah/Tools/*.py[oc]
 %{py_sitedir}/Cheetah/Utils/*.py[oc]
 %{py_sitedir}/Cheetah/Utils/optik/*.py[oc]
+%{py_sitedir}/Cheetah-1.0-py2.4.egg-info
 
 %attr(755,root,root) %{_bindir}/cheetah
 %attr(755,root,root) %{_bindir}/cheetah-compile
