@@ -23,7 +23,7 @@ System szablonów dla jêzyka Python.
 
 %prep
 %setup -q -n Cheetah-%{version}
-%patch -p1
+%patch0 -p1
 
 %build
 python setup.py build
