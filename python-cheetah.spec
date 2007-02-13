@@ -1,5 +1,5 @@
 Summary:	Python-powered template engine and code-generator
-Summary(pl.UTF-8):   System szablonów dla języka Python
+Summary(pl.UTF-8):	System szablonów dla języka Python
 Name:		python-cheetah
 Version:	1.0
 Release:	3
