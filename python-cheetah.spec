@@ -1,18 +1,21 @@
 Summary:	Python-powered template engine and code-generator
 Summary(pl.UTF-8):	System szablonów dla języka Python
 Name:		python-cheetah
-Version:	2.2.1
-Release:	4
+Version:	2.4.4
+Release:	1
 License:	MIT
 Group:		Libraries/Python
-Source0:	http://downloads.sourceforge.net/cheetahtemplate/Cheetah-%{version}.tar.gz
-# Source0-md5:	137491aef378b502b2ee71c03b929faf
+#Source0Download: https://pypi.python.org/simple/cheetah/
+Source0:	https://files.pythonhosted.org/packages/source/C/Cheetah/Cheetah-%{version}.tar.gz
+# Source0-md5:	853917116e731afbc8c8a43c37e6ddba
 URL:		http://www.cheetahtemplate.org/
 BuildRequires:	python >= 2.2.1
 BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python-markdown >= 2.0.1
 BuildRequires:	python-modules
+BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.710
+BuildRequires:	rpmbuild(macros) >= 1.714
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,8 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES LICENSE README TODO
+%doc CHANGES LICENSE README.markdown TODO
 %attr(755,root,root) %{_bindir}/cheetah
+%attr(755,root,root) %{_bindir}/cheetah-analyze
 %attr(755,root,root) %{_bindir}/cheetah-compile
 %dir %{py_sitedir}/Cheetah
 %{py_sitedir}/Cheetah/*.py[oc]
@@ -58,8 +62,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/Cheetah/Tools/*.txt
 %dir %{py_sitedir}/Cheetah/Utils
 %{py_sitedir}/Cheetah/Utils/*.py[oc]
-%dir %{py_sitedir}/Cheetah/contrib
-%{py_sitedir}/Cheetah/contrib/*.py[oc]
-%dir %{py_sitedir}/Cheetah/contrib/markdown
-%{py_sitedir}/Cheetah/contrib/markdown/*.py[oc]
-%{py_sitedir}/Cheetah-*.egg-info
+%{py_sitedir}/Cheetah-%{version}-py*.egg-info
